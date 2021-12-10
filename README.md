@@ -1,2 +1,2 @@
 # KeepDeveloping
-Este repositório foi criado para completar o terceiro trabalho da unidade curricular de MDS, unidade curricular do mestrado em Engenharia Informática
+This repository was created to complete the third assignment of the MDS curricular unit of the Masters in Computer Engineering.
