@@ -1,14 +1,17 @@
 {
-    "_comment": "<> means a value should be inserted instead of the word used",
-    "_comment2": "this structure is built assuming the app will have 2 parts (control and planning for example), each one with a page for each of the topics it has",
-    "<topico>": [{
-        "<pagina>": "<nome>",
-        "content": [
-            {
-                "type": "<img/video/text>",
-                "value": "<path/text>",
-                "styles": "<object with special styles like the ones used on the components/page>"
-            }
-        ]
-    }]
+   "_comment":"<> means a value should be inserted instead of the word used",
+   "_comment2":"this structure is built assuming the app will have 2 parts (control and planning for example), each one with a page for each of the topics it has",
+   "<topico>":[
+      {
+         "<pagina>":{
+            "content":[
+               {
+                  "type":"<img/video/text>",
+                  "value":"<path/text>",
+                  "styles":"<object with special styles like the ones used on the components/page>"
+               }
+            ]
+         }
+      }
+   ]
 }
