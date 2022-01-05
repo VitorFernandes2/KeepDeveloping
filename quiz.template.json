@@ -8,7 +8,8 @@
                   "question": "<question>",
                   "wrong_answers":["<wrong>", "<wrong>", "<wrong>"],
                   "answer": "<answer>",
-                  "image": "<path>"
+                  "image": "<path>",
+                  "category": "<categoria>"
               }
             ]
        }
