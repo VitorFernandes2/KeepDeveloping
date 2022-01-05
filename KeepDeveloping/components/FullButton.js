@@ -13,16 +13,16 @@ const FullButton = ({txt, clicked}) => {
 const styles = StyleSheet.create({
     bt:{
         backgroundColor: "#43136e",
-        borderRadius: 10,
-        width: "75%",
+        borderRadius: 50,
         flexDirection: 'row',
-        justifyContent: 'center',
-        margin: 16,
-        padding: 6
+        padding: 6,
+        width: '75%'
     },
     text:{
         color: "#fff",
-        fontSize: 20
+        fontSize: 20,
+        flex: 1,
+        textAlign: 'center'
     }
 })
 
