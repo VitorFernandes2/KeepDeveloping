@@ -1,0 +1,16 @@
+{
+    "_comment":"<> means a value should be inserted instead of the word used",
+    "_comment2":"this structure is built assuming the app will have 2 parts (control and planning for example), each one with a group of questions",
+    "<topico>":[
+       {
+          "questions":[
+              {
+                  "question": "<question>",
+                  "wrong_answers":["<wrong>", "<wrong>", "<wrong>"],
+                  "answer": "<answer>",
+                  "image": "<path>"
+              }
+            ]
+       }
+    ]
+ }
