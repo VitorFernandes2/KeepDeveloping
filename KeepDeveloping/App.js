@@ -15,7 +15,18 @@ export default function App() {
         initialRouteName="Home"
       >
         <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="InformationScreen" component={InformationScreen}/>
+        <Stack.Screen 
+          name="Information" component={InformationScreen}
+          options={() => ({
+            headerShown: true,
+            title: "Informação",
+            headerTitleAlign: 'center',
+            headerStyle:  {
+              backgroundColor: '#7eab84',
+            },
+            headerTintColor: '#000'
+          })}
+        />
         <Stack.Screen
           name="Game"
           component={DifficultiesScreen}

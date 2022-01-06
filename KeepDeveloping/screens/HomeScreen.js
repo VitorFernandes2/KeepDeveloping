@@ -27,8 +27,8 @@ const HomeScreen = ({ navigation }) => {
       </View>
       <View style={styles.containerButtons}>
         <FullButton clicked={() => navigation.navigate("Game")} txt="Jogar" />
-        <FullButton clicked={() => navigation.navigate('',{})} txt="Documentação" />
-        <TransparentButton clicked={()=>navigation.navigate("InformationScreen")} txt="Informação"/>
+        <FullButton clicked={() => navigation.navigate("Information")} txt="Documentação"/> 
+        <TransparentButton clicked={()=>navigation.navigate("Information")} txt="Informação"/>
       </View>
     </View>
   );
@@ -65,7 +65,8 @@ const styles = StyleSheet.create({
   textSlogan:{
     fontFamily: 'Agile',
     fontSize: 40,
-    rotation: -25
+    //rotation: -25, //deprecated
+    transform: [{ rotate: '-25deg'}]
   }
 });
 
