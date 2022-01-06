@@ -5,6 +5,7 @@ import TransparentButton from "../components/TransparentButton";
 import { useFonts } from 'expo-font';
 
 const HomeScreen = ({ navigation }) => {
+
   function click() {
     Alert.alert("Click");
   }
@@ -27,7 +28,7 @@ const HomeScreen = ({ navigation }) => {
       </View>
       <View style={styles.containerButtons}>
         <FullButton clicked={() => navigation.navigate("Game")} txt="Jogar" />
-        <FullButton clicked={() => navigation.navigate("Information")} txt="Documentação"/> 
+        <FullButton clicked={() => navigation.navigate("Resources")} txt="Documentação"/> 
         <TransparentButton clicked={()=>navigation.navigate("Information")} txt="Informação"/>
       </View>
     </View>
