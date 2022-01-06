@@ -1,7 +1,7 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import HomeScreen from "./screens/HomeScreen";
 import InformationScreen from "./screens/InformationScreen";
+import { HomeScreen, DifficultiesScreen, QuizScreen } from "./screens";
 
 const Stack = createNativeStackNavigator();
 
@@ -16,6 +16,32 @@ export default function App() {
       >
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="InformationScreen" component={InformationScreen}/>
+        <Stack.Screen
+          name="Game"
+          component={DifficultiesScreen}
+          options={() => ({
+            headerShown: true,
+            title: "Dificuldades",
+            headerTitleAlign: 'center',
+            headerStyle:  {
+              backgroundColor: '#7eab84',
+            },
+            headerTintColor: '#fff'
+          })}
+        />
+        <Stack.Screen
+          name="Quiz"
+          component={QuizScreen}
+          options={(props) => ({
+            headerShown: true,
+            title: props.route.params.title,
+            headerTitleAlign: 'center',
+            headerStyle:  {
+              backgroundColor: '#7eab84',
+            },
+            headerTintColor: '#fff'
+          })}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
