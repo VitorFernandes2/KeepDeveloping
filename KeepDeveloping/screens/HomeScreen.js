@@ -26,10 +26,9 @@ const HomeScreen = ({ navigation }) => {
         <Text style={styles.textSlogan}>Let's Agile!</Text>
       </View>
       <View style={styles.containerButtons}>
-        <FullButton clicked={click} txt="Jogar" />
-        <FullButton clicked={click} txt="Documentação" />
+        <FullButton clicked={() => navigation.navigate('',{})} txt="Jogar" />
+        <FullButton clicked={() => navigation.navigate('',{})} txt="Documentação" />
         <TransparentButton clicked={()=>navigation.navigate("InformationScreen")} txt="Informação"/>
-        <TransparentButton clicked={() => navigation.navigate('',{})} txt="Informação" />
       </View>
     </View>
   );
