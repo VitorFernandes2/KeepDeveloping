@@ -1,10 +1,12 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, StatusBar } from "react-native";
 import DifficultyBadge from "../components/DifficultyBadge";
+import { baseColors } from "../styles/colors";
 
 const DifficultiesScreen = (props) => {
   return (
     <View style={styles.container}>
+        <StatusBar backgroundColor={baseColors.primary} barStyle='dark-content'/>
         <View style={{marginBottom: 45}}>
             <DifficultyBadge name={"Fácil"} greenStars={1}/>
         </View>
@@ -20,7 +22,7 @@ const DifficultiesScreen = (props) => {
 
 const styles = StyleSheet.create({
     container : {
-        backgroundColor: '#7eab84',
+        backgroundColor: baseColors.primary,
         flex: 1,
         flexDirection: 'column',
         alignItems: 'center',

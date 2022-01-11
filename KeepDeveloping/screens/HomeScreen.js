@@ -1,25 +1,26 @@
 import React from "react";
-import { Alert, Text, Image, StyleSheet, View } from "react-native";
+import { Alert, Text, Image, StyleSheet, View, StatusBar } from "react-native";
 import FullButton from "../components/FullButton";
 import TransparentButton from "../components/TransparentButton";
-import { useFonts } from 'expo-font';
+import { useFonts } from "expo-font";
+import { baseColors } from "../styles/colors";
 
 const HomeScreen = ({ navigation }) => {
-
   function click() {
     Alert.alert("Click");
   }
 
   const [loaded] = useFonts({
-    Agile: require('../assets/fonts/library-3-amsoft.otf'),
+    Agile: require("../assets/fonts/library-3-amsoft.otf"),
   });
-  
+
   if (!loaded) {
     return null;
   }
 
   return (
     <View style={styles.containerMain}>
+      <StatusBar backgroundColor={baseColors.primary} barStyle="dark-content" />
       <View style={styles.containerImage}>
         <Image source={require("../assets/home_img.png")} />
       </View>
@@ -38,7 +39,7 @@ const HomeScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   containerMain: {
     padding: 26,
-    backgroundColor: "#7eab84",
+    backgroundColor: baseColors.primary,
     flex: 1,
     flexDirection: "column",
     alignItems: "center",
@@ -61,14 +62,14 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "space-evenly",
-    marginTop: 60
+    marginTop: 60,
   },
-  textSlogan:{
-    fontFamily: 'Agile',
+  textSlogan: {
+    fontFamily: "Agile",
     fontSize: 40,
     //rotation: -25, //deprecated
-    transform: [{ rotate: '-25deg'}]
-  }
+    transform: [{ rotate: "-25deg" }],
+  },
 });
 
 export default HomeScreen;

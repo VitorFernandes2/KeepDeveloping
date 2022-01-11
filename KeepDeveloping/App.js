@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import InformationScreen from "./screens/InformationScreen";
 import { HomeScreen, DifficultiesScreen, QuizScreen } from "./screens";
 import ResourcesScreen from "./screens/resources/Resources";
+import { baseColors } from "./styles/colors";
 
 const Stack = createNativeStackNavigator();
 
@@ -16,18 +17,15 @@ export default function App() {
         initialRouteName="Home"
       >
         <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen
-          name="Information" component={InformationScreen}
-          options={() => ({
+        <Stack.Screen name="InformationScreen" component={InformationScreen} options={() => ({
             headerShown: true,
             title: "Sobre",
             headerTitleAlign: 'center',
-            headerStyle: {
-              backgroundColor: '#7eab84',
+            headerStyle:  {
+              backgroundColor: baseColors.primary,
             },
-            headerTintColor: '#000'
-          })}
-        />
+            headerTintColor: baseColors.secondary
+          })} />
         <Stack.Screen
           name="Game"
           component={DifficultiesScreen}
@@ -35,10 +33,10 @@ export default function App() {
             headerShown: true,
             title: "Dificuldades",
             headerTitleAlign: 'center',
-            headerStyle: {
-              backgroundColor: '#7eab84',
+            headerStyle:  {
+              backgroundColor: baseColors.primary,
             },
-            headerTintColor: '#fff'
+            headerTintColor: baseColors.secondary
           })}
         />
         <Stack.Screen
@@ -48,10 +46,10 @@ export default function App() {
             headerShown: true,
             title: props.route.params.title,
             headerTitleAlign: 'center',
-            headerStyle: {
-              backgroundColor: '#7eab84',
+            headerStyle:  {
+              backgroundColor: baseColors.primary,
             },
-            headerTintColor: '#fff'
+            headerTintColor: baseColors.secondary
           })}
         />
         <Stack.Screen
@@ -61,9 +59,9 @@ export default function App() {
             title: "Documentação",
             headerTitleAlign: 'center',
             headerStyle: {
-              backgroundColor: '#7eab84',
+              backgroundColor: baseColors.primary,
             },
-            headerTintColor: '#fff'
+            headerTintColor: baseColors.secondary
           })} />
       </Stack.Navigator>
     </NavigationContainer>
