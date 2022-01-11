@@ -20,7 +20,7 @@ export default function App() {
           name="Information" component={InformationScreen}
           options={() => ({
             headerShown: true,
-            title: "Informação",
+            title: "Sobre",
             headerTitleAlign: 'center',
             headerStyle: {
               backgroundColor: '#7eab84',
