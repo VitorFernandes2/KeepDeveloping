@@ -7,13 +7,13 @@ const DifficultiesScreen = (props) => {
   return (
     <View style={styles.container}>
         <StatusBar backgroundColor={baseColors.primary} barStyle='dark-content'/>
-        <View style={{marginBottom: 45}}>
+        <View>
             <DifficultyBadge name={"Fácil"} greenStars={1}/>
         </View>
-        <View style={{marginBottom: 45}}>
+        <View>
             <DifficultyBadge name={"Médio"} greenStars={2}/>
         </View>
-        <View style={{marginBottom: 45}}>
+        <View>
             <DifficultyBadge name={"Dificil"} greenStars={3}/>
         </View>
     </View>
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'space-around'
     },
 });
 
