@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, StyleSheet, Pressable} from 'react-native';
+import { baseColors } from '../styles/colors';
 
 const TransparentButton = ({txt, clicked}) => {
 
@@ -17,14 +18,15 @@ const styles = StyleSheet.create({
     bt:{
         backgroundColor: "#00000000",
         borderRadius: 50,
-        borderColor: "#43136e",
+        borderColor: baseColors.secondary,
         borderWidth: 1,
         width: "75%",
         flexDirection: 'row',
         padding: 18
     },
     text:{
-        color: "#43136e",
+        color: baseColors.secondary,
+        fontWeight: 'bold',
         fontSize: 20,
         flex: 1,
         textAlign: 'center',

@@ -1,8 +1,14 @@
 import React from "react";
-import { StyleSheet, View, Text, TouchableWithoutFeedback } from "react-native";
+import {
+  StyleSheet,
+  View,
+  Text,
+  TouchableWithoutFeedback
+} from "react-native";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { useNavigation } from "@react-navigation/native";
+import { baseColors } from "../styles/colors";
 
 const DifficultyBadge = (props) => {
   const { name, greenStars } = props;
@@ -30,7 +36,7 @@ const DifficultyBadge = (props) => {
                 <FontAwesomeIcon
                   key={i}
                   icon={faStar}
-                  style={{ color: "#00ff00", marginRight: 5 }}
+                  style={{ color: baseColors.yellow, marginRight: 5 }}
                 />
               ) : (
                 <FontAwesomeIcon

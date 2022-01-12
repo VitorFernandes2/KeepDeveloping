@@ -1,7 +1,6 @@
 import React from "react";
-import { Alert, Text, Image, StyleSheet, View, ScrollView } from "react-native";
-import FullButton from "../../components/FullButton";
-import TransparentButton from "../../components/TransparentButton";
+import { Alert, Text, Image, StyleSheet, View, ScrollView, StatusBar } from "react-native";
+import { baseColors } from "../../styles/colors";
 import Topic from "./Topic"
 
 const ResourcesScreen = ({ navigation }) => {
@@ -11,6 +10,7 @@ const ResourcesScreen = ({ navigation }) => {
   
     return (
     <View style={styles.containerMain}>
+      <StatusBar backgroundColor={baseColors.primary} barStyle="dark-content" />
         <ScrollView >
         <View style={styles.resourcesContainer}>
              <Topic name="Gestão" content="Equipa"/> 
@@ -26,17 +26,15 @@ const ResourcesScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   containerMain: {
-    padding: 26,
-    backgroundColor: "#7eab84",
+    backgroundColor: baseColors.primary,
     flex: 10,
-    flexDirection: "column",
-    // borderWidth: 1,
-    // borderColor: "blue"
+    flexDirection: "column"
   },
   resourcesContainer: {
     flex: 1,
     flexDirection: "column",
-    marginBottom: 8
+    marginHorizontal: 10,
+    marginBottom: 25
   }
 });
 

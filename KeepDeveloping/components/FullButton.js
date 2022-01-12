@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, StyleSheet, Pressable} from 'react-native';
+import { baseColors } from '../styles/colors';
 
 
 const FullButton = ({txt, clicked}) => {
@@ -12,7 +13,7 @@ const FullButton = ({txt, clicked}) => {
 
 const styles = StyleSheet.create({
     bt:{
-        backgroundColor: "#43136e",
+        backgroundColor: baseColors.secondary,
         borderRadius: 50,
         flexDirection: 'row',
         padding: 18,
@@ -21,6 +22,7 @@ const styles = StyleSheet.create({
     text:{
         color: "#fff",
         fontSize: 20,
+        fontWeight: 'bold',
         flex: 1,
         textAlign: 'center'
     }
