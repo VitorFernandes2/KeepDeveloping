@@ -1,7 +1,12 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import InformationScreen from "./screens/InformationScreen";
-import { HomeScreen, DifficultiesScreen, QuizScreen } from "./screens";
+import {
+  HomeScreen,
+  DifficultiesScreen,
+  QuizScreen,
+  ClassificationScreen,
+} from "./screens";
 import ResourcesScreen from "./screens/resources/Resources";
 import { baseColors } from "./styles/colors";
 
@@ -54,10 +59,24 @@ export default function App() {
         />
         <Stack.Screen
           name="Resources"
-          component={ResourcesScreen} options={() => ({
+          component={ResourcesScreen}
+          options={() => ({
             headerShown: true,
             title: "Documentação",
-            headerTitleAlign: 'center',
+            headerTitleAlign: "center",
+            headerStyle: {
+              backgroundColor: baseColors.primary,
+            },
+            headerTintColor: baseColors.secondary
+          })}
+        />
+        <Stack.Screen
+          name="Classification"
+          component={ClassificationScreen}
+          options={() => ({
+            headerShown: true,
+            title: "Classificação",
+            headerTitleAlign: "center",
             headerStyle: {
               backgroundColor: baseColors.primary,
             },
