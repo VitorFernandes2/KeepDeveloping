@@ -1,0 +1,79 @@
+[
+        {
+            "question":"Who should gather/define the requirements?",
+            "wrong_answers":[
+                "Scrum Master",
+                "Developers",
+                "Developer Master"
+            ],
+            "answer":"PO",
+            "image":"Q1.png",
+            "category":"<categoria>"
+        },
+        {
+            "question":"Which of these must be done daily? ",
+            "wrong_answers":[
+            "Retrospective",
+            "Monthly Meeting",
+            "Sprint Review"
+            ],
+            "answer":"Daily Meeting",
+            "image":"Q2.png",
+            "category":"<categoria>"
+        },
+        {
+            "question":"Which of the following is a Scrum role?",
+            "wrong_answers":[
+            "Scrum Project",
+            "Master Developer",
+            "Helper"
+            ],
+            "answer":"Scrum Master",
+            "image":"Q2.png",
+            "category":"<categoria>"
+        },
+        {
+            "question":"What is a Sprint?",
+            "wrong_answers":[
+            "A 100 meter race between developers",
+            "Fast developer",
+            "Fast project"
+            ],
+            "answer":"A short period when a team works to complete a set amount of work.",
+            "image":"Q4.png",
+            "category":"<categoria>"
+        },
+        {
+            "question":"Who prepares the Product Backlog?",
+            "wrong_answers":[
+                "Scrum Master",
+                "Developers",
+                "Client"
+            ],
+            "answer":"PO",
+            "image":"Q2.png",
+            "category":"<categoria>"
+        },
+        {
+            "question":"How much time a daily meeting usually takes?",
+            "wrong_answers":[
+            "2 hours",
+            "4 hours",
+            "8 hours"
+            ],
+            "answer":"15 mins",
+            "image":"Q3.png",
+            "category":"<categoria>"
+        },
+        {
+            "question":"What topic falls outside the scope of a well-run daily stand-up meeting?",
+            "wrong_answers":[
+            "Recently completed tasks",
+            "Current obstacles",
+            "Planning out an iteration or sprint"
+            ],
+            "answer":"What everyone will work on today",
+            "image":"Q4.png",
+            "category":"<categoria>"
+        }
+    ]
