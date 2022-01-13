@@ -6,7 +6,7 @@
             "Developers",
             "Developer Master"
         ],
-        "answer":"Project Owner",
+        "answer":"Product Owner",
         "image":"Q1.png",
         "category":"<categoria>"
     },
@@ -50,7 +50,7 @@
             "Developers",
             "Client"
         ],
-        "answer":"Project Owner",
+        "answer":"Product Owner",
         "image":"Q2.png",
         "category":"<categoria>"
     },
