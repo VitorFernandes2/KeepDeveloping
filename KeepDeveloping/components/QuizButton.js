@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
     alignContent: "center",
     alignItems: "center",
     justifyContent: "center",
+    textAlign: "center",
   },
   btRed: {
     backgroundColor: baseColors.red,
@@ -69,6 +70,7 @@ const styles = StyleSheet.create({
     padding: 16,
     alignContent: "center",
     alignItems: "center",
+    textAlign: "center",
   },
   btGreen: {
     backgroundColor: baseColors.green,
@@ -81,18 +83,21 @@ const styles = StyleSheet.create({
     padding: 16,
     alignContent: "center",
     alignItems: "center",
+    textAlign: "center",
   },
   text: {
     color: baseColors.secondary,
     fontSize: 20,
     textAlign: "center",
     fontWeight: "bold",
+    width: "100%",
   },
   textOther: {
     color: baseColors.primary,
     fontSize: 20,
     textAlign: "center",
     fontWeight: "bold",
+    width: "100%",
   },
 });
 
