@@ -1,27 +1,35 @@
-import { React, useState } from "react";
+import { React, useEffect, useState } from "react";
 import { StyleSheet, Text, Pressable } from "react-native";
 import { baseColors } from "../styles/colors";
 
 const QuizButton = (props) => {
-  const { isWrong, text } = props;
-  const [value, setValue] = useState("none");
+  const { isWrong, text, pressAction, defaultStyle, value, setValue, answered } = props;
 
   return (
     <Pressable
       style={
-        value === "none"
+        defaultStyle === true
+          ? styles.btCenter
+          : value === "none"
           ? styles.bt
           : value === "wrong"
           ? styles.btRed
           : styles.btGreen
       }
       onPress={() => {
-        if (value === 'none') {
-          setValue(isWrong ? 'wrong' : 'right');
+        pressAction();
+        if (!defaultStyle) {
+          if (answered !== null && answered !== undefined && answered === false) {
+            if (value === "none") {
+              setValue(isWrong ? "wrong" : "right");
+            }
+          }
         }
       }}
     >
-      <Text style={value === "none" ? styles.text : styles.textOther}>{text}</Text>
+      <Text style={defaultStyle === true ? styles.textOther : value === "none" ? styles.text : styles.textOther}>
+        {text}
+      </Text>
     </Pressable>
   );
 };
@@ -38,6 +46,17 @@ const styles = StyleSheet.create({
     padding: 16,
     alignContent: "center",
     alignItems: "center",
+  },
+  btCenter: {
+    backgroundColor: baseColors.secondary,
+    borderRadius: 30,
+    width: "100%",
+    flexDirection: "row",
+    marginTop: 16,
+    padding: 16,
+    alignContent: "center",
+    alignItems: "center",
+    justifyContent: "center",
   },
   btRed: {
     backgroundColor: baseColors.red,

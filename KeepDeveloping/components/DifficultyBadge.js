@@ -1,23 +1,26 @@
 import React from "react";
-import {
-  StyleSheet,
-  View,
-  Text,
-  TouchableWithoutFeedback
-} from "react-native";
+import { StyleSheet, View, Text, TouchableWithoutFeedback } from "react-native";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { useNavigation } from "@react-navigation/native";
 import { baseColors } from "../styles/colors";
 
 const DifficultyBadge = (props) => {
-  const { name, greenStars } = props;
+  const { name, greenStars, questions, randomOrder } = props;
   const navigation = useNavigation();
+  const sortQuestions = (q, r) => {
+    let arr= [];
+    for (let i = 0; i < r.length; i++) {
+      arr.push(q[r[i]]);
+    }
+    return arr;
+  };
+  const sortedQuestions = sortQuestions(questions, randomOrder);
 
   return (
     <TouchableWithoutFeedback
       onPress={() => {
-        navigation.navigate("Quiz", { title: name });
+        navigation.navigate("Quiz", { title: name, questions: sortedQuestions });
       }}
     >
       <View style={styles.container}>
