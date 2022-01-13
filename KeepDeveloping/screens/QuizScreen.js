@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Image, StyleSheet, Text, View, StatusBar, Alert } from "react-native";
+import { Image, StyleSheet, Text, View, StatusBar, Alert, ScrollView } from "react-native";
 import QuizButton from "../components/QuizButton";
 import { baseColors } from "../styles/colors";
 
@@ -117,28 +117,28 @@ const QuizScreen = ({ route, navigation }) => {
     if (questions[order - 1].image === "Q1.png") {
       return (
         <Image
-          style={{ maxWidth: "100%", maxHeight: 250, borderRadius: 10 }}
+          style={styles.imageDimension}
           source={require("../assets/Q1.png")}
         />
       );
     } else if (questions[order - 1].image === "Q2.png") {
       return (
         <Image
-          style={{ maxWidth: "100%", maxHeight: 250, borderRadius: 10 }}
+          style={styles.imageDimension}
           source={require("../assets/Q2.png")}
         />
       );
     } else if (questions[order - 1].image === "Q3.png") {
       return (
         <Image
-          style={{ maxWidth: "100%", maxHeight: 250, borderRadius: 10 }}
+          style={styles.imageDimension}
           source={require("../assets/Q3.png")}
         />
       );
     }
     return (
       <Image
-        style={{ maxWidth: "100%", maxHeight: 250, borderRadius: 10 }}
+        style={styles.imageDimension}
         source={require("../assets/Q3.png")}
       />
     );
@@ -147,34 +147,35 @@ const QuizScreen = ({ route, navigation }) => {
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor={baseColors.primary} barStyle="dark-content" />
-      <View style={{ marginHorizontal: 16, marginTop: 30 }}>
-        <View style={{ marginBottom: 16, alignSelf: "center" }}>
-          <Text style={styles.text}>
-            {"P." + order + " " + questions[order - 1].question}
-          </Text>
+      <ScrollView style={styles.scrollStyle}>
+        <View style={{ margin: 16 }}>
+          <View style={{ marginBottom: 16, alignSelf: "center" }}>
+            <Text style={styles.text}>
+              {"P." + order + " " + questions[order - 1].question}
+            </Text>
+          </View>
+          <RenderImage />
+          <RenderQuestions />
+          <View style={styles.nextButtonContainer}>
+            {answered ? (
+              <QuizButton
+                defaultStyle={true}
+                text={"Next >"}
+                pressAction={() => {
+                  setStyle1("none");
+                  setStyle2("none");
+                  setStyle3("none");
+                  setStyle4("none");
+                  bumpOrder();
+                  setOrderBtn(createOrder());
+                }}
+                value={style5}
+                setValue={setStyle5}
+              />
+            ) : null}
+          </View>
         </View>
-        <RenderImage />
-        <RenderQuestions />
-        <View style={styles.nextButtonContainer}>
-          {answered ? (
-            <QuizButton
-              defaultStyle={true}
-              text={"center"}
-              text={"Next >"}
-              pressAction={() => {
-                setStyle1("none");
-                setStyle2("none");
-                setStyle3("none");
-                setStyle4("none");
-                bumpOrder();
-                setOrderBtn(createOrder());
-              }}
-              value={style5}
-              setValue={setStyle5}
-            />
-          ) : null}
-        </View>
-      </View>
+      </ScrollView>
     </View>
   );
 };
@@ -183,6 +184,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: baseColors.primary,
     textAlign: "center",
+    flex: 1
   },
   text: {
     fontSize: 30,
@@ -195,7 +197,17 @@ const styles = StyleSheet.create({
     alignContent: "center",
     alignItems: "center",
     marginTop: 15,
+    flex: 1,
   },
+  scrollStyle: {
+    paddingTop: StatusBar.paddingTop,
+    flex:1,
+  },
+  imageDimension: {
+    width: "100%",
+    height: 300,
+    borderRadius: 10
+  }
 });
 
 export default QuizScreen;

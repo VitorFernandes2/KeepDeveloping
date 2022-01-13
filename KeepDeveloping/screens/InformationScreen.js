@@ -8,7 +8,7 @@ const InformationScreen = ({ navigation }) => {
         <View style={styles.containerMain}>
             <StatusBar backgroundColor={baseColors.primary} barStyle='dark-content'/>
             <View style={styles.containerText}>
-                <Text style={[styles.bodyText, {paddingBottom: 10}]}>Desenvolvido para MDS por:</Text>
+                <Text style={[styles.bodyText, {paddingBottom: 10, textAlign: "center"}]}>Desenvolvido para MDS por:</Text>
                 <Text style={styles.bodyText}>Emanuel Ferreira</Text>
                 <Text style={styles.bodyText}>Hugo Ferreira</Text>
                 <Text style={styles.bodyText}>Leandro José</Text>
