@@ -1,8 +1,70 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { View, Image, StyleSheet, ScrollView, Text } from "react-native";
 import { baseColors } from "../styles/colors";
+import {clean, getClassifications} from "../API/Storage"
 
 const ClassificationScreen = () => {
+
+  const [data, setData] = useState([])
+
+  useEffect( async () => {
+    let d = await getClassifications()
+    setData(d)
+
+    //console.log(await clean()); //ONLY FOR DEVELOPMENT PURPOSES!!
+  }, [])
+
+  function classList(){
+    let es = [];
+    
+    for(let i = 0; i < data.length; i++){
+      let str = "@KeepDeveloping_C" + (i+1).toString()
+
+      if(data[i][str] == null)
+          continue
+
+      if(data[i][str].score == undefined || data[i][str].level == undefined)
+        continue
+
+      let l = data[i][str].level
+      let ls = (l == 1) ? "Easy" : (l == 2) ? "Medium" : "Hard" 
+      es = [...es,  <View style={[{...styles.scoreBoardLine, borderTopStartRadius: 20, borderTopEndRadius: 20, marginBottom: 20}]}>
+                      <View>
+                        <Text style={styles.font}>{i+1}º - </Text>
+                      </View>
+                      <View style={{paddingLeft: 15}}>
+                        <Text style={styles.font}>{data[i][str].score} | {ls}</Text>
+                      </View>
+                    </View>]
+    }
+    return es
+  }
+
+{/* <View style={[{...styles.scoreBoardLine, borderTopStartRadius: 20, borderTopEndRadius: 20}]}>
+  <View>
+    <Text style={styles.font}>1º - </Text>
+  </View>
+  <View style={{paddingLeft: 15}}>
+    <Text style={styles.font}>12344 Pontos</Text>
+  </View>
+</View>
+<View style={[{...styles.scoreBoardLine, backgroundColor: '#59A8D9'}]}>
+  <View>
+    <Text style={styles.font}>2º - </Text>
+  </View>
+  <View style={{paddingLeft: 15}}>
+    <Text style={styles.font}>12344 Pontos</Text>
+  </View>
+</View>
+<View style={[{...styles.scoreBoardLine, borderBottomStartRadius: 20, borderBottomEndRadius: 20}]}>
+  <View>
+    <Text style={styles.font}>3º - </Text>
+  </View>
+  <View style={{paddingLeft: 15}}>
+    <Text style={styles.font}>12343 Pontos</Text>
+  </View>
+</View> */}
+
   return (
     <View style={styles.containerMain}>
       <Image
@@ -15,32 +77,11 @@ const ClassificationScreen = () => {
         source={require("../assets/images/classification.png")}
       />
       <ScrollView>
-        <View style={styles.boardContainer}>
-          <View style={[{...styles.scoreBoardLine, borderTopStartRadius: 20, borderTopEndRadius: 20}]}>
-            <View>
-              <Text style={styles.font}>1º - </Text>
-            </View>
-            <View style={{paddingLeft: 15}}>
-              <Text style={styles.font}>12345 Pontos</Text>
-            </View>
-          </View>
-          <View style={[{...styles.scoreBoardLine, backgroundColor: '#59A8D9'}]}>
-            <View>
-              <Text style={styles.font}>2º - </Text>
-            </View>
-            <View style={{paddingLeft: 15}}>
-              <Text style={styles.font}>12344 Pontos</Text>
-            </View>
-          </View>
-          <View style={[{...styles.scoreBoardLine, borderBottomStartRadius: 20, borderBottomEndRadius: 20}]}>
-            <View>
-              <Text style={styles.font}>3º - </Text>
-            </View>
-            <View style={{paddingLeft: 15}}>
-              <Text style={styles.font}>12343 Pontos</Text>
-            </View>
-          </View>
-        </View>
+        {/* <View style={styles.boardContainer}> */}
+          {data != [] && <View style={styles.boardContainer}>
+            {classList()}
+          </View>}
+        {/* </View> */}
       </ScrollView>
     </View>
   );
