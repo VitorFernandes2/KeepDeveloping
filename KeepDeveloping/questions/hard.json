@@ -1,79 +1,79 @@
 [
-        {
-           "question":"Which of the following user stories is complete and follows the correct structure?",
-           "wrong_answers":[
-              "I want to order plant care tools so that I can keep my plants healthy.”",
-              "I want to purchase plants, but I’m worried they won’t get to me safely",
-              "As a customer, I want to be able to access my account dashboard quickly and easily”"
-           ],
-           "answer":"As a plant owner, I want to know how much sunlight my plant needs so that I can maximize its growth",
-           "image":"Q1.png",
-           "category":"<categoria>"
-        },
-        {
-            "question":"Who participates in the sprint planning?",
-            "wrong_answers":[
-               "Project Owner and Scrum Master",
-               "Only the developers",
-               "Scrum Master and Developers"
-            ],
-            "answer":"All the team",
-            "image":"Q2.png",
-            "category":"<categoria>"
-        },
-        {
-            "question":"What should teams do before Agile sprint planning and execution?",
-            "wrong_answers":[
-               "Develop",
-               "Shot the product to the client",
-               "Scrum Master"
-            ],
-            "answer":"Gather software requirements",
-            "image":"Q4.png",
-            "category":"<categoria>"
-        },
-        {
-            "question":"What must the team discuss in a sprint planning meeting?",
-            "wrong_answers":[
-               "Who will be the Scrum Master",
-               "Whether this or an alternative project would deliver more business value",
-               "What the team will be doing during weekend"
-            ],
-            "answer":"When and how they will deliver backlog items",
-            "image":"Q1.png",
-            "category":"<categoria>"
-        },
-        {
-            "question":"What should teams do before Agile sprint planning and execution?",
-            "wrong_answers":[
-               "Project Owner and Scrum Master",
-               "Only the developers",
-               "Scrum Master and Developers"
-            ],
-            "answer":"All the team",
-            "image":"Q2.png",
-            "category":"<categoria>"
-        },
-        {
-            "question":"Who prepares the Product Backlog?",
-            "wrong_answers":[
-            "2 hours",
-            "4 hours",
-            "8 hours"
-            ],
-            "answer":"15 mins",
-            "image":"Q4.png",
-            "category":"<categoria>"
-        },
-        {
-            "question":"Which of the following is a Scrum role?",
-            "wrong_answers":[
-            "Scrum Project",
-            "Master Developer",
-            "Helper"
-            ],
-            "answer":"Scrum Master",
-            "image":"Q1.png",
-            "category":"<categoria>"
-        }
-     ]
+    {
+       "question":"Which of the following user stories is complete and follows the correct structure?",
+       "wrong_answers":[
+          "I want to order plant care tools so that I can keep my plants healthy.”",
+          "I want to purchase plants, but I’m worried they won’t get to me safely",
+          "As a customer, I want to be able to access my account dashboard quickly and easily”"
+       ],
+       "answer":"As a plant owner, I want to know how much sunlight my plant needs so that I can maximize its growth",
+       "image":"Q1.png",
+       "category":"<categoria>"
+    },
+    {
+        "question":"Who participates in the sprint planning?",
+        "wrong_answers":[
+           "Project Owner and Scrum Master",
+           "Only the developers",
+           "Scrum Master and Developers"
+        ],
+        "answer":"All the team",
+        "image":"Q2.png",
+        "category":"<categoria>"
+    },
+    {
+        "question":"What should teams do before Agile sprint planning and execution?",
+        "wrong_answers":[
+           "Develop",
+           "Shot the product to the client",
+           "Scrum Master"
+        ],
+        "answer":"Gather software requirements",
+        "image":"Q4.png",
+        "category":"<categoria>"
+    },
+    {
+        "question":"Agile is...",
+        "wrong_answers":[
+           "A modern methodology for delivering projects",
+           "A mindset",
+           "A process, mainly used for software development"
+        ],
+        "answer":"All of the above",
+        "image":"Q4.png",
+        "category":"<categoria>"
+    },
+    {
+        "question":"Which of these Agile terms is paired with its correct definition?",
+        "wrong_answers":[
+           "User personas: a summary of a feature from the user's perspective",
+           "Use cases: a characterization of your intended end user",
+           "User stories: documentation of user paths through an app"
+        ],
+        "answer":"Acceptance criteria: what needs to be done for a user story to be achieved",
+        "image":"Q4.png",
+        "category":"<categoria>"
+    },
+    {
+        "question":"What primarily distinguishes Scrum from its superset Agile?",
+        "wrong_answers":[
+           "An iterative and incremental development approach",
+           "Post-release review meetings",
+           "A flexibility to constantly changing software requirements"
+        ],
+        "answer":"A set of predetermined roles",
+        "image":"Q4.png",
+        "category":"<categoria>"
+    },
+    {
+        "question":"How should user stories be written?",
+        "wrong_answers":[
+           "Given...when…then…",
+           "The system shall…",
+           "If inputs…then outputs…"
+        ],
+        "answer":"As a…I want…so that...",
+        "image":"Q4.png",
+        "category":"<categoria>"
+    }
+ ]
