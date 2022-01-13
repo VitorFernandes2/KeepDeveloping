@@ -1,8 +1,63 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { View, Image, StyleSheet, ScrollView, Text } from "react-native";
 import { baseColors } from "../styles/colors";
+import {init, getClassifications, saveGame} from "../API/Storage"
 
 const ClassificationScreen = () => {
+
+  const [data, setData] = useState(null)
+
+  useEffect(() => {
+    getClassifications().then(d => {
+      setData(d)
+      console.log(d)
+    })
+    
+  }, [])
+
+  function classList(){
+    let es = [];
+
+    console.log("data: " + data)
+
+    for(let i = 1; i <= 5; i++){
+      es = [...es,  <View style={[{...styles.scoreBoardLine, borderTopStartRadius: 20, borderTopEndRadius: 20}]}>
+                      <View>
+                        <Text style={styles.font}>{i}º - </Text>
+                      </View>
+                      <View style={{paddingLeft: 15}}>
+                        <Text style={styles.font}>{data[i].score} | {data[i].level}</Text>
+                      </View>
+                    </View>]
+    }
+    return es
+  }
+
+{/* <View style={[{...styles.scoreBoardLine, borderTopStartRadius: 20, borderTopEndRadius: 20}]}>
+  <View>
+    <Text style={styles.font}>1º - </Text>
+  </View>
+  <View style={{paddingLeft: 15}}>
+    <Text style={styles.font}>12344 Pontos</Text>
+  </View>
+</View>
+<View style={[{...styles.scoreBoardLine, backgroundColor: '#59A8D9'}]}>
+  <View>
+    <Text style={styles.font}>2º - </Text>
+  </View>
+  <View style={{paddingLeft: 15}}>
+    <Text style={styles.font}>12344 Pontos</Text>
+  </View>
+</View>
+<View style={[{...styles.scoreBoardLine, borderBottomStartRadius: 20, borderBottomEndRadius: 20}]}>
+  <View>
+    <Text style={styles.font}>3º - </Text>
+  </View>
+  <View style={{paddingLeft: 15}}>
+    <Text style={styles.font}>12343 Pontos</Text>
+  </View>
+</View> */}
+
   return (
     <View style={styles.containerMain}>
       <Image
@@ -16,30 +71,7 @@ const ClassificationScreen = () => {
       />
       <ScrollView>
         <View style={styles.boardContainer}>
-          <View style={[{...styles.scoreBoardLine, borderTopStartRadius: 20, borderTopEndRadius: 20}]}>
-            <View>
-              <Text style={styles.font}>1º - </Text>
-            </View>
-            <View style={{paddingLeft: 15}}>
-              <Text style={styles.font}>12345 Pontos</Text>
-            </View>
-          </View>
-          <View style={[{...styles.scoreBoardLine, backgroundColor: '#59A8D9'}]}>
-            <View>
-              <Text style={styles.font}>2º - </Text>
-            </View>
-            <View style={{paddingLeft: 15}}>
-              <Text style={styles.font}>12344 Pontos</Text>
-            </View>
-          </View>
-          <View style={[{...styles.scoreBoardLine, borderBottomStartRadius: 20, borderBottomEndRadius: 20}]}>
-            <View>
-              <Text style={styles.font}>3º - </Text>
-            </View>
-            <View style={{paddingLeft: 15}}>
-              <Text style={styles.font}>12343 Pontos</Text>
-            </View>
-          </View>
+          {data != null && classList()}
         </View>
       </ScrollView>
     </View>

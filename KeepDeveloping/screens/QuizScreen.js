@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Image, StyleSheet, Text, View, StatusBar, Alert, ScrollView } from "react-native";
 import QuizButton from "../components/QuizButton";
 import { baseColors } from "../styles/colors";
+import { saveGame } from "../API/Storage";
 
 const QuizScreen = ({ route, navigation }) => {
   const { questions } = route.params;
@@ -24,17 +25,21 @@ const QuizScreen = ({ route, navigation }) => {
     setPoints(points + 1);
   };
 
-  const bumpOrder = () => {
+  const bumpOrder = async () => {
     if (order < questions.length) {
       setOrder(order + 1);
       setAnswered(false);
     } else if (order === questions.length) {
       //update classification
+      let sc = await saveGame({score: points, level: 1})
+      let txt = ""
+      if(!sc)
+        txt = "Erro ao guardar classificação..."
       Alert.alert(
         "Parabéns!",
         "Conseguiu completar o nosso jogo e teve ao todo " +
           points +
-          " Pontos.",
+          " Pontos. " + txt,
         [{ text: "OK", onPress: () => navigation.goBack() }]
       );
     }
