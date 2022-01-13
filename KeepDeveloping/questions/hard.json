@@ -13,7 +13,7 @@
     {
         "question":"Who participates in the sprint planning?",
         "wrong_answers":[
-           "Project Owner and Scrum Master",
+           "Product Owner and Scrum Master",
            "Only the developers",
            "Scrum Master and Developers"
         ],
