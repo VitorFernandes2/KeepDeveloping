@@ -1,0 +1,154 @@
+{
+  "Agile": {
+    "Introduction": {
+      "content": [
+        {
+          "type": "text",
+          "value": "What is Agile?",
+          "styles": "Titulo"
+        },
+        {
+          "type": "text",
+          "value": "Agile is an iterative approach to project management and software development that helps teams deliver value to their customers faster and with fewer headaches. Instead of betting everything on a \"big bang\" launch, an agile team delivers work in small, but consumable, increments. Requirements, plans, and results are evaluated continuously so teams have a natural mechanism for responding to change quickly.",
+          "styles": "Texto"
+        },
+        {
+          "type": "image",
+          "value": "Agile",
+          "styles": "Imagem"
+        }
+      ]
+    },
+    "Why Agile?": {
+      "content": [
+        {
+          "type": "text",
+          "value": "Why choose Agile?",
+          "styles": "Titulo"
+        },
+        {
+          "type": "text",
+          "value": "Teams choose agile so they can respond to changes in the marketplace or feedback from customers quickly without derailing a year's worth of plans. \"Just enough\" planning and shipping in small, frequent increments lets your team gather feedback on each change and integrate it into future plans at minimal cost. But it's not just a numbers game—first and foremost, it's about people. As described by the Agile Manifesto, authentic human interactions are more important than rigid processes. Collaborating with customers and teammates is more important than predefined arrangements. And delivering a working solution to the customer's problem is more important than hyper-detailed documentation. An agile team unites under a shared vision, then brings it to life the way they know is best. Each team sets their own standards for quality, usability, and completeness. Their \"definition of done\" then informs how fast they'll churn the work out. Although it can be scary at first, company leaders find that when they put their trust in an agile team, that team feels a greater sense of ownership and rises to meet (or exceed) management's expectations.",
+          "styles": "Texto"
+        }
+      ]
+    },
+    "Scrum": {
+      "content": [
+        {
+          "type": "text",
+          "value": "What is Scrum?",
+          "styles": "Titulo"
+        },
+        {
+          "type": "text",
+          "value": "Scrum is a framework that helps teams work together. Much like a rugby team (where it gets its name) training for the big game, scrum encourages teams to learn through experiences, self-organize while working on a problem, and reflect on their wins and losses to continuously improve. While the scrum I’m talking about is most frequently used by software development teams, its principles and lessons can be applied to all kinds of teamwork. This is one of the reasons scrum is so popular. Often thought of as an agile project management framework, scrum describes a set of meetings, tools, and roles that work in concert to help teams structure and manage their work.",
+          "styles": "Texto"
+        },
+        {
+          "type": "image",
+          "value": "Scrum",
+          "styles": "Imagem"
+        },
+        {
+          "type": "video",
+          "value": "What_Is_Scrum",
+          "styles": "Video"
+        }
+      ]
+    }
+  },
+  "Planning": {
+    "Introduction": {
+      "content": [
+        {
+          "type": "text",
+          "value": "Planning",
+          "styles": "Titulo"
+        },
+        {
+          "type": "text",
+          "value": "The Product Owner represents the needs of customers, users, and other stakeholders. How many requirements the product owner prepares for the next sprint depends on the developer’s development velocity. The central tool to capture and manage requirements is the Product Backlog. The product backlog changes throughout the project: existing requirements are implemented, new requirements are added, existing requirements are changed, refined, or dropped, and the priority of requirements can change. The efforts of all product backlog entries are estimated by the developers.",
+          "styles": "Texto"
+        },
+        {
+          "type": "image",
+          "value": "Agile_planning",
+          "styles": "Imagem"
+        }
+      ]
+    },
+    "Release Planning": {
+      "content": [
+        {
+          "type": "text",
+          "value": "Release Planning",
+          "styles": "Titulo"
+        },
+        {
+          "type": "text",
+          "value": "The Product Owner creates the release plan and updates it before each sprint. The release plan provides an overview of the time frame, cost frame, and dates for intermediate results. It roughly shows the order in which the requirements are implemented and the expected number of sprints. At first, planning is only rough. During the project, the release plan is regularly further detailed by the product owner so that he can monitor and control the project effectively. Risks are also specifically addressed.",
+          "styles": "Texto"
+        }
+      ]
+    },
+    "Sprint Planning": {
+      "content": [
+        {
+          "type": "text",
+          "value": "Release Planning",
+          "styles": "Titulo"
+        },
+        {
+          "type": "text",
+          "value": "At the beginning of each sprint, the entire Scrum team meets for the Sprint Planning Meeting. This lasts a maximum of one day and is used to define the sprint backlog for the developers for the upcoming sprint. The Product Owner presents the Product Backlog Items with the highest priority to the team and names the sprint goal with which the developers must agree. Together, both sides determine which part of the product backlog the team can turn into a shippable product increment in the upcoming sprint.",
+          "styles": "Texto"
+        }
+      ]
+    },
+    "Daily Meeting": {
+      "content": [
+        {
+          "type": "text",
+          "value": "Release Planning",
+          "styles": "Titulo"
+        },
+        {
+          "type": "text",
+          "value": "The 15-minute Daily Scrum Meeting is a status meeting where sprint progress is determined, team members coordinate and inform each other, and the next 24 hours are scheduled. At this stand-up meeting, participants are best placed in a semicircle around the taskboard, which displays the sprint backlog with requirements and activities and their progress. The Scrum Master takes part in the Daily Scrum, notes impediments on his impediment list and moderates if necessary. If possible, the product owner also participates in the Daily Scrum to stay up to date and answer questions if necessary. Only the developers speak and report the following to each other:\nWhat did I achieve yesterday to help the Scrum team achieve the sprint goal?\nWhat will I do today to help the Scrum team achieve the sprint goal?\nDo I see any impediments preventing me or the Scrum team from achieving the sprint goal?",
+          "styles": "Texto"
+        }
+      ]
+    },
+    "Responsability": {
+      "content": [
+        {
+          "type": "text",
+          "value": "Who is Responsible for Planning?",
+          "styles": "Titulo"
+        },
+        {
+          "type": "text",
+          "value": "The product owner is responsible for the requirements, product backlog and release planning. Also for the first part of sprint planning (when it comes to WHAT). The developers are responsible for the second part of the sprint planning (when it comes to HOW) and for the daily planning in the sprint.\nThe role of the Scrum Master is to support in planning, coaches and trains the team where necessary and moderates the planning meetings.",
+          "styles": "Texto"
+        }
+      ]
+    }
+  },
+  "Control": {
+    "Project Management": {
+      "content": [
+        {
+          "type": "text",
+          "value": "Planning",
+          "styles": "Titulo"
+        },
+        {
+          "type": "text",
+          "value": "In Scrum, work, progress and results are monitored in each Daily Scrum and in each Sprint Review. In case of deviations from the plan, the Scrum Team can quickly initiate actions, reschedule, possibly adapt processes and learn from it (inspect, adapt and learn).\nWhen it comes to the actual work in the sprint, the developers themselves decide on the appropriate measures, since are self-managed. They themselves will move a user story to the next sprint if it is no longer achievable or, in consultation with the product owner, cancel it if, contrary to expectations, it cannot be implemented.\nOn a higher level, the Product Owner controls and decides the outcome of each sprint. For example, only the product owner is entitled to cancel a sprint—even if he does so on the advice of the stakeholders, the developers or the Scrum Master. The product owner also controls the Product Backlog, i.e. he coordinates the priorities of functionalities with the customer and stakeholders. He then decides on the composition and sequence of the user stories and their distribution to releases and sprints.",
+          "styles": "Texto"
+        }
+      ]
+    }
+  }
+}
