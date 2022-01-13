@@ -5,7 +5,7 @@ import { baseColors } from "../styles/colors";
 import { saveGame } from "../API/Storage";
 
 const QuizScreen = ({ route, navigation }) => {
-  const { questions } = route.params;
+  const { questions, title } = route.params;
 
   const [order, setOrder] = useState(1);
   const [points, setPoints] = useState(0);
@@ -31,7 +31,19 @@ const QuizScreen = ({ route, navigation }) => {
       setAnswered(false);
     } else if (order === questions.length) {
       //update classification
-      let sc = await saveGame({score: points, level: 1})
+      let level = 0
+      switch(title){
+        case "Fácil":
+          level = 1
+          break
+        case "Médio":
+          level = 2
+          break
+        default:
+          level = 3
+          break
+      }
+      let sc = await saveGame({score: points, level: level})
       let txt = ""
       if(!sc)
         txt = "Erro ao guardar classificação..."
