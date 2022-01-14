@@ -33,10 +33,10 @@ const QuizScreen = ({ route, navigation }) => {
       //update classification
       let level = 0
       switch(title){
-        case "Fácil":
+        case "Easy":
           level = 1
           break
-        case "Médio":
+        case "Medium":
           level = 2
           break
         default:
@@ -46,12 +46,12 @@ const QuizScreen = ({ route, navigation }) => {
       let sc = await saveGame({score: points, level: level})
       let txt = ""
       if(!sc)
-        txt = "Erro ao guardar classificação..."
+        txt = "Error saving classification..."
       Alert.alert(
-        "Parabéns!",
-        "Conseguiu completar o nosso jogo e teve ao todo " +
+        "Congratulations!",
+        "You were able to finnish our quiz with " +
           points +
-          " Pontos. " + txt,
+          " Points. " + txt,
         [{ text: "OK", onPress: () => navigation.goBack() }]
       );
     }
