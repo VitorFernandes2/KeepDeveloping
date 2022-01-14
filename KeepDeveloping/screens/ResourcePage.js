@@ -95,6 +95,7 @@ const styles = StyleSheet.create({
   text: {
     textAlign: "justify",
     marginTop: 10,
+    fontSize: 22,
   },
   image: {
     width: "100%",
