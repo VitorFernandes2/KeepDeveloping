@@ -28,7 +28,7 @@
         },
         {
           "type": "text",
-          "value": "Teams choose agile so they can respond to changes in the marketplace or feedback from customers quickly without derailing a year's worth of plans. \"Just enough\" planning and shipping in small, frequent increments lets your team gather feedback on each change and integrate it into future plans at minimal cost. But it's not just a numbers game—first and foremost, it's about people. As described by the Agile Manifesto, authentic human interactions are more important than rigid processes. Collaborating with customers and teammates is more important than predefined arrangements. And delivering a working solution to the customer's problem is more important than hyper-detailed documentation. An agile team unites under a shared vision, then brings it to life the way they know is best. Each team sets their own standards for quality, usability, and completeness. Their \"definition of done\" then informs how fast they'll churn the work out. Although it can be scary at first, company leaders find that when they put their trust in an agile team, that team feels a greater sense of ownership and rises to meet (or exceed) management's expectations.",
+          "value": "Teams choose agile so they can respond to changes in the marketplace or feedback from customers quickly without derailing a year's worth of plans. \"Just enough\" planning and shipping in small, frequent increments lets your team gather feedback on each change and integrate it into future plans at minimal cost. But it's not just a numbers game—first and foremost, it's about people. As described by the Agile Manifesto, authentic human interactions are more important than rigid processes. Collaborating with customers and teammates is more important than predefined arrangements. And delivering a working solution to the customer's problem is more important than hyper-detailed documentation. An agile team unites under a shared vision, then brings it to life the way they know is best. Each team sets their own standards for quality, usability, and completeness. Their \"definition of done\" then informs how fast they'll churn the workout. Although it can be scary at first, company leaders find that when they put their trust in an agile team, that team feels a greater sense of ownership and rises to meet (or exceed) management's expectations.",
           "styles": "Texto"
         }
       ]
@@ -129,7 +129,7 @@
         },
         {
           "type": "text",
-          "value": "The product owner is responsible for the requirements, product backlog and release planning. Also for the first part of sprint planning (when it comes to WHAT). The developers are responsible for the second part of the sprint planning (when it comes to HOW) and for the daily planning in the sprint.\nThe role of the Scrum Master is to support in planning, coaches and trains the team where necessary and moderates the planning meetings.",
+          "value": "The product owner is responsible for the requirements, product backlog and release planning. Also for the first part of sprint planning (when it comes to WHAT). The developers are responsible for the second part of the sprint planning (when it comes to HOW) and for the daily planning in the sprint.\nThe role of the Scrum Master is to support in planning, coach and trains the team where necessary and moderates the planning meetings.",
           "styles": "Texto"
         }
       ]

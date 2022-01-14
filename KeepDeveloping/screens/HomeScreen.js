@@ -6,10 +6,6 @@ import { useFonts } from "expo-font";
 import { baseColors } from "../styles/colors";
 
 const HomeScreen = ({ navigation }) => {
-  function click() {
-    Alert.alert("Click");
-  }
-
   const [loaded] = useFonts({
     Agile: require("../assets/fonts/library-3-amsoft.otf"),
   });
@@ -28,10 +24,10 @@ const HomeScreen = ({ navigation }) => {
         <Text style={styles.textSlogan}>Let's Agile!</Text>
       </View>
       <View style={styles.containerButtons}>
-        <FullButton clicked={() => navigation.navigate("Game")} txt="Jogar" />
-        <FullButton clicked={() => navigation.navigate("Resources")} txt="Documentação"/> 
-        <FullButton clicked={() => navigation.navigate("Classification")} txt="Classificação"/>
-        <TransparentButton clicked={()=>navigation.navigate("InformationScreen")} txt="Sobre"/>
+        <FullButton clicked={() => navigation.navigate("Game")} txt="Play"/>
+        <FullButton clicked={() => navigation.navigate("Resources")} txt="Documentation"/> 
+        <FullButton clicked={() => navigation.navigate("Classification")} txt="Classification"/>
+        <TransparentButton clicked={()=>navigation.navigate("Information")} txt="About"/>
       </View>
     </View>
   );

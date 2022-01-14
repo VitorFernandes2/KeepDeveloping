@@ -25,7 +25,7 @@ export default function App() {
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Information" component={InformationScreen} options={() => ({
             headerShown: true,
-            title: "Sobre",
+            title: "About",
             headerTitleAlign: 'center',
             headerStyle:  {
               backgroundColor: baseColors.primary,
@@ -37,7 +37,7 @@ export default function App() {
           component={DifficultiesScreen}
           options={() => ({
             headerShown: true,
-            title: "Dificuldades",
+            title: "Difficulties",
             headerTitleAlign: 'center',
             headerStyle: {
               backgroundColor: baseColors.primary,
@@ -63,7 +63,7 @@ export default function App() {
           component={ResourcesScreen}
           options={() => ({
             headerShown: true,
-            title: "Documentação",
+            title: "Documentation",
             headerTitleAlign: "center",
             headerStyle: {
               backgroundColor: baseColors.primary,
@@ -76,7 +76,7 @@ export default function App() {
           component={ClassificationScreen}
           options={() => ({
             headerShown: true,
-            title: "Classificação",
+            title: "Classification",
             headerTitleAlign: "center",
             headerStyle: {
               backgroundColor: baseColors.primary,
