@@ -25,7 +25,7 @@
         "question":"What should teams do before Agile sprint planning and execution?",
         "wrong_answers":[
            "Develop",
-           "Shot the product to the client",
+           "Show the product to the client",
            "Scrum Master"
         ],
         "answer":"Gather software requirements",
@@ -40,7 +40,7 @@
            "A process, mainly used for software development"
         ],
         "answer":"All answers",
-        "image":"Q4.png",
+        "image":"Q3.png",
         "category":"<categoria>"
     },
     {
@@ -62,7 +62,7 @@
            "A flexibility to constantly changing software requirements"
         ],
         "answer":"A set of predetermined roles",
-        "image":"Q4.png",
+        "image":"Q1.png",
         "category":"<categoria>"
     },
     {
@@ -73,7 +73,7 @@
            "If inputs…then outputs…"
         ],
         "answer":"As a…I want…so that...",
-        "image":"Q4.png",
+        "image":"Q2.png",
         "category":"<categoria>"
     }
  ]
